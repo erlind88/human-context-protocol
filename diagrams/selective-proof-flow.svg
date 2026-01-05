@@ -1,15 +1,15 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
   <defs>
     <style>
       .title { font: 700 26px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #111827; }
       .sub   { font: 400 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #374151; }
       .lbl   { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #111827; }
-      .txt   { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #374151; }
+      .txt   { font: 400 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #374151; }
       .pill  { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #065f46; }
       .box   { fill: #ffffff; stroke: #d1d5db; stroke-width: 2; rx: 18; }
       .arrow { stroke: #6b7280; stroke-width: 2.5; fill: none; }
-      .dline { stroke: #9ca3af; stroke-width: 2; fill: none; stroke-dasharray: 6 6; }
+      .line  { stroke: #9ca3af; stroke-width: 2; fill: none; stroke-dasharray: 6 6; }
     </style>
 
     <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
@@ -17,35 +17,53 @@
     </marker>
   </defs>
 
+  <!-- Header -->
   <text x="60" y="70" class="title">Selective Proof Flow (VC + ZKP)</text>
-  <text x="60" y="102" class="sub">A service verifies truth (Yes/No) without receiving or storing personal data.</text>
+  <text x="60" y="105" class="sub">A service verifies truth (Yes/No) without receiving or storing personal data.</text>
 
-  <rect x="80" y="170" width="300" height="170" class="box"/>
-  <text x="110" y="210" class="lbl">User Wallet</text>
-  <text x="110" y="240" class="txt">Contains:</text>
-  <text x="110" y="265" class="txt">• Verifiable Credential (VC)</text>
-  <text x="110" y="290" class="txt">• Generates Zero-Knowledge Proof (ZKP)</text>
+  <!-- Outer frame -->
+  <rect x="50" y="130" width="1100" height="360" class="box" rx="22"/>
 
-  <rect x="450" y="170" width="300" height="170" class="box"/>
-  <text x="480" y="210" class="lbl">Service</text>
-  <text x="480" y="235" class="txt">(Pharmacy / Merchant)</text>
-  <text x="480" y="265" class="txt">Requests specific claims:</text>
-  <text x="480" y="290" class="txt">• Age ≥ 18?</text>
-  <text x="480" y="315" class="txt">• Valid prescription?</text>
+  <!-- Boxes -->
+  <rect x="90"  y="170" width="300" height="200" class="box"/>
+  <rect x="450" y="170" width="300" height="200" class="box"/>
+  <rect x="810" y="170" width="300" height="200" class="box"/>
 
-  <rect x="820" y="170" width="300" height="170" class="box"/>
-  <text x="850" y="210" class="lbl">Issuer / Registry</text>
-  <text x="850" y="235" class="txt">(Doctor, Insurer, Authority)</text>
-  <text x="850" y="265" class="txt">Provides verification keys /</text>
-  <text x="850" y="290" class="txt">revocation status</text>
+  <!-- User Wallet text -->
+  <text x="120" y="220" class="lbl">User Wallet</text>
+  <text x="120" y="250" class="txt">Contains:</text>
+  <text x="120" y="275" class="txt">• Verifiable Credential (VC)</text>
+  <text x="120" y="300" class="txt">• Private keys (local)</text>
+  <text x="120" y="325" class="txt">• Generates Zero-Knowledge Proof (ZKP)</text>
 
-  <path d="M 380 255 C 410 255, 420 255, 450 255" class="arrow" marker-end="url(#arrowhead)"/>
-  <text x="395" y="235" class="txt">ZKP proof</text>
+  <!-- Service text -->
+  <text x="480" y="220" class="lbl">Service</text>
+  <text x="480" y="245" class="txt">(Pharmacy / Merchant)</text>
+  <text x="480" y="275" class="txt">Requests specific claims:</text>
+  <text x="480" y="300" class="txt">• Age ≥ 18?</text>
+  <text x="480" y="325" class="txt">• Valid prescription?</text>
+  <text x="480" y="350" class="txt">No identity, no birthdate, no storage.</text>
 
-  <path d="M 750 255 C 780 255, 790 255, 820 255" class="arrow" marker-end="url(#arrowhead)"/>
-  <text x="760" y="235" class="txt">Signature check</text>
+  <!-- Issuer / Registry text -->
+  <text x="840" y="220" class="lbl">Issuer / Registry</text>
+  <text x="840" y="245" class="txt">(Doctor, Insurer, Authority)</text>
+  <text x="840" y="275" class="txt">Provides:</text>
+  <text x="840" y="300" class="txt">• Verification keys</text>
+  <text x="840" y="325" class="txt">• Revocation / expiry status</text>
+  <text x="840" y="350" class="txt">• Credential trust anchors</text>
 
-  <rect x="80" y="390" width="1040" height="80" class="box"/>
-  <text x="110" y="430" class="pill">Key idea:</text>
-  <text x="190" y="430" class="txt">Verification without disclosure or storage.</text>
+  <!-- Arrows -->
+  <path d="M 390 270 C 420 270, 420 270, 450 270" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="405" y="255" class="txt">ZKP proof</text>
+
+  <path d="M 750 270 C 780 270, 780 270, 810 270" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="765" y="255" class="txt">Signature check</text>
+
+  <!-- Optional dashed "no storage" signal -->
+  <path d="M 600 175 L 600 365" class="line"/>
+
+  <!-- Footer strip -->
+  <rect x="90" y="400" width="1020" height="70" class="box" rx="18"/>
+  <text x="120" y="442" class="pill">Key idea:</text>
+  <text x="190" y="442" class="txt">Verification without disclosure or storage. The service only learns “Yes/No,” not your data.</text>
 </svg>
