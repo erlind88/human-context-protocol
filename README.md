@@ -11,7 +11,12 @@ This repository explores a simple question:
 
 **What if digital systems asked only for proof — not data — and forgot everything once the task was done?**
 
----
+## Visual overview
+
+![Selective Proof Flow](diagrams/selective-proof-flow.svg)
+
+A high-level view of how verifiable credentials and zero-knowledge proofs enable trust without exposing personal data.
+
 
 ## The core idea
 
