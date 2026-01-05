@@ -1,0 +1,51 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <style>
+      .title { font: 700 26px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #111827; }
+      .sub   { font: 400 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #374151; }
+      .lbl   { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #111827; }
+      .txt   { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #374151; }
+      .pill  { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #065f46; }
+      .box   { fill: #ffffff; stroke: #d1d5db; stroke-width: 2; rx: 18; }
+      .arrow { stroke: #6b7280; stroke-width: 2.5; fill: none; }
+      .dline { stroke: #9ca3af; stroke-width: 2; fill: none; stroke-dasharray: 6 6; }
+    </style>
+
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="60" y="70" class="title">Selective Proof Flow (VC + ZKP)</text>
+  <text x="60" y="102" class="sub">A service verifies truth (Yes/No) without receiving or storing personal data.</text>
+
+  <rect x="80" y="170" width="300" height="170" class="box"/>
+  <text x="110" y="210" class="lbl">User Wallet</text>
+  <text x="110" y="240" class="txt">Contains:</text>
+  <text x="110" y="265" class="txt">• Verifiable Credential (VC)</text>
+  <text x="110" y="290" class="txt">• Generates Zero-Knowledge Proof (ZKP)</text>
+
+  <rect x="450" y="170" width="300" height="170" class="box"/>
+  <text x="480" y="210" class="lbl">Service</text>
+  <text x="480" y="235" class="txt">(Pharmacy / Merchant)</text>
+  <text x="480" y="265" class="txt">Requests specific claims:</text>
+  <text x="480" y="290" class="txt">• Age ≥ 18?</text>
+  <text x="480" y="315" class="txt">• Valid prescription?</text>
+
+  <rect x="820" y="170" width="300" height="170" class="box"/>
+  <text x="850" y="210" class="lbl">Issuer / Registry</text>
+  <text x="850" y="235" class="txt">(Doctor, Insurer, Authority)</text>
+  <text x="850" y="265" class="txt">Provides verification keys /</text>
+  <text x="850" y="290" class="txt">revocation status</text>
+
+  <path d="M 380 255 C 410 255, 420 255, 450 255" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="395" y="235" class="txt">ZKP proof</text>
+
+  <path d="M 750 255 C 780 255, 790 255, 820 255" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="760" y="235" class="txt">Signature check</text>
+
+  <rect x="80" y="390" width="1040" height="80" class="box"/>
+  <text x="110" y="430" class="pill">Key idea:</text>
+  <text x="190" y="430" class="txt">Verification without disclosure or storage.</text>
+</svg>
